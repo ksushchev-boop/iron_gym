@@ -7,7 +7,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#0a0a0a">
 <title>IRON — Gym Tracker</title>
-<link rel="manifest" href="./manifest.json">
+<link rel="manifest" href="/iron_gym/manifest.json">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='90' fill='%230a0a0a'/%3E%3Ctext x='256' y='340' text-anchor='middle' font-family='Arial Black' font-size='240' fill='%23ff3d00' font-weight='900'%3EI%3C/text%3E%3C/svg%3E">
+<meta name="apple-mobile-web-app-title" content="IRON">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -562,7 +564,7 @@ function fds(iso){if(!iso)return'';const d=new Date(iso);return d.toLocaleDateSt
 renderHome();
 document.querySelectorAll('.mo').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('on')}));
 document.getElementById('wkn').addEventListener('keydown',e=>{if(e.key==='Enter')createWk()});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('/iron_gym/sw.js',{scope:'/iron_gym/'}).catch(()=>{});
 </script>
 </body>
 </html>
